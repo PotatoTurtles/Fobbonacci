@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fib(n){
+            let values = [0,1];
+            if(n<=1){
+                return n
+            }
+            for(let i=0;i<n-1;i++){
+                values[values.length]=values[values.length-2]+values[values.length-1]
+            }
+            return values[values.length-1]
+        }
+        function fibsRec(n){
+            return n<2?n:fibsRec(n-1)+fibsRec(n-2)
+        }
+        console.log(fibsRec(4));
+    </script>
+</body>
+</html>
